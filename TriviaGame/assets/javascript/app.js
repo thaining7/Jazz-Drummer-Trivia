@@ -4,8 +4,39 @@ $(document).ready(function () {
   var timerRunning = false;
   var numCorrect = 0;
   var numIncorrect = 0;
-  var numUnanswered = 0;
-  //var answerKey = ["Answer q1", "Answer q3", ]
+  var numUnanswered = 5;
+  var answerKey = ["q1b","q2c","q3b","q4d", "q5a"];
+  
+  //score function here
+
+  function scoreGame() {
+    myTimer.stop();
+    $("input:checked").each(function() {
+      numUnanswered--;
+      var a = $(this).val();
+      if ($.inArray(a, answerKey)==0) {
+        numCorrect++;
+      }
+      else {
+        numIncorrect++;
+      }
+    });
+    localStorage.setItem(numCorrect, numIncorrect, numUnanswered);
+    window.location.href = "finish.html";
+    console.log("Correct: " + numCorrect + ". Wrong: " + numIncorrect + ". Unanswered " + numUnanswered);
+    
+
+  };
+  
+
+
+
+  // onclick submit button function here...
+  $("#submit-btn").click(function(){
+      scoreGame();
+  });
+
+
 
   var myTimer = {
 
@@ -25,6 +56,11 @@ $(document).ready(function () {
       var converted = myTimer.timeConverter(myTimer.time);
       console.log(converted);
       $("#time-remaining").text(converted);
+
+      if (myTimer.time === 0) {
+        scoreGame();
+      }
+
     },
 
     stop: function () {
@@ -61,9 +97,11 @@ $(document).ready(function () {
   * create on click function for submit button
   * for each question, psuedo-select input take with :checked and extract value of submitted answer using .val
   * store extracted value as variable 
-  * cross-reference whether submitted answer is the correct answer
-  * if user input and answer in key match, then increment correct answer variable by 1,
+  * wer is thecross-reference whether submitted ans correct answer
+  * if user input and anwer in key match, then increment correct answer variable by 1,
   * otherwise increment incorrect variable by 1 or unanswered variable by 1
+ 
+ 
   * Create results function:
   * present results to user what they scored
   * Create reset function:
@@ -74,5 +112,6 @@ $(document).ready(function () {
   * 
   * 
   */
+
 
 });

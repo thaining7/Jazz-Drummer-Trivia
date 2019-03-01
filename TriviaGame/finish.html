@@ -7,6 +7,22 @@
     <title>Trivia Game</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var scoreUrl = document.location.href,
+                params = url.split('?')[1].split('&');
+            // var score = localStorage.getItem(numCorrect, numIncorrect, numUnanswered);
+            $("#correct").text("Correct Answers " + numCorrect);
+            $("#incorrect").text("Incorrect Answers " + numIncorrect);
+            $("#unanswered").text("Unanswered " + numUnanswered);
+        },
+
+        
+
+
+
+    </script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -17,7 +33,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="container text-center">
 
         <div class="row">
 
@@ -32,6 +48,9 @@
                 <p id="incorrect">Incorrect Answers: </p>
 
                 <p id="unanswered">Unanswered: </p>
+                <br>
+
+                <a class="btn btn-primary" id="reset" href="index.html" role="button">Play Again!</a>
 
             </div>
 
