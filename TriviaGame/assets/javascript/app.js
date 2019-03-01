@@ -5,7 +5,7 @@ $(document).ready(function () {
   var numCorrect = 0;
   var numIncorrect = 0;
   var numUnanswered = 5;
-  var answerKey = ["q1b","q2c","q3b","q4d", "q5a"];
+  var answerKey = ["q1b", "q2c", "q3b", "q4d", "q5a"];
   
   //score function here
 
@@ -14,15 +14,16 @@ $(document).ready(function () {
     $("input:checked").each(function() {
       numUnanswered--;
       var a = $(this).val();
-      if ($.inArray(a, answerKey)==0) {
+      if ($.inArray(a, answerKey) >= 0) {
         numCorrect++;
       }
       else {
         numIncorrect++;
       }
     });
-    localStorage.setItem(numCorrect, numIncorrect, numUnanswered);
-    window.location.href = "finish.html";
+    // localStorage.setItem(numCorrect, numIncorrect, numUnanswered);
+    var scoreUrl = "finish.html?" + numCorrect + "&" + numIncorrect + "&" + numUnanswered;
+    window.location.href = scoreUrl;
     console.log("Correct: " + numCorrect + ". Wrong: " + numIncorrect + ". Unanswered " + numUnanswered);
     
 
@@ -32,7 +33,7 @@ $(document).ready(function () {
 
 
   // onclick submit button function here...
-  $("#submit-btn").click(function(){
+  $("#submit-btn").click(function() {
       scoreGame();
   });
 

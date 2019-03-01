@@ -9,14 +9,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-        $(document).ready(function () {
-            var scoreUrl = document.location.href,
-                params = url.split('?')[1].split('&');
+        $(document).ready(function() {
+            var scoreUrl = document.location.href;
+            var params = scoreUrl.split('?')[1].split('&');
             // var score = localStorage.getItem(numCorrect, numIncorrect, numUnanswered);
-            $("#correct").text("Correct Answers " + numCorrect);
-            $("#incorrect").text("Incorrect Answers " + numIncorrect);
-            $("#unanswered").text("Unanswered " + numUnanswered);
-        },
+            $("#correct").text("Correct Answers: " + params[0]);
+            $("#incorrect").text("Incorrect Answers: " + params[1]);
+            $("#unanswered").text("Unanswered: " + params[2]);
+            console.log("correct " + params[0], "incorrect " + params[1], "unanswered " + params[2]);
+        });
 
         
 
@@ -39,7 +40,7 @@
 
             <div class="col-md-12">
 
-                <h1>Trivia Game</h1>
+                <h1>Jazz Drummer Trivia</h1>
 
                 <h2>All done!</h2>
 
