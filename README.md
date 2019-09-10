@@ -76,6 +76,10 @@ var myTimer = {
   };
 ```
 
+# Screenshots
+
+![App Screenshot](/assets/images/Screenshot.png)
+
 # How to use:
 
 #### Complete the quiz within the allotted amount of time. After you finish, click the submit button to see your results.
