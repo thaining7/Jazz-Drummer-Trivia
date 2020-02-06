@@ -2,27 +2,27 @@
 
 https://thaining7.github.io/Jazz-Drummer-Trivia/
 
-### Test your knowledge of jazz drummer history!
+Test your knowledge of jazz drummer history!
 
-# Motivation
+## Description
 
-#### This project was designed to demonstrate JavaScript fundumentals in addition to some slightly more advanced JavaScript concepts
+This project was designed to demonstrate JavaScript fundumentals in addition to some slightly more advanced JavaScript concepts
 
-# Tech Used:
+## Tech Used:
 
 * HTML
 * CSS
 * JavaScript
 * jQuery
 
-# Features
+## Features
 
 * JavaScript timing events
 * jQuery on click events
 
-# Code Example
+## Code Example
 
-#### JavaScript timer function expression: 
+JavaScript timer function expression: 
 
 ```
 var myTimer = {
@@ -76,10 +76,10 @@ var myTimer = {
   };
 ```
 
-# Screenshots
+## Screenshots
 
 ![App Screenshot](/assets/images/Screenshot.png)
 
-# How to use:
+## How to use:
 
-#### Complete the quiz within the allotted amount of time. After you finish, click the submit button to see your results.
+Complete the quiz within the given amount of time. After you finish, click the submit button to see your results.
