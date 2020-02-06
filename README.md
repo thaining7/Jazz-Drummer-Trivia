@@ -1,6 +1,6 @@
 # Jazz Drummer Trivia
 
-https://thaining7.github.io/JazzDrummerTrivia/
+https://thaining7.github.io/Jazz-Drummer-Trivia/
 
 ### Test your knowledge of jazz drummer history!
 
