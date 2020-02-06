@@ -6,7 +6,7 @@ Test your knowledge of jazz drummer history!
 
 ## Description
 
-This project was designed to demonstrate JavaScript fundumentals in addition to some slightly more advanced JavaScript concepts
+This project was designed to demonstrate JavaScript fundumentals in addition to some advanced JavaScript concepts
 
 ## Tech Used:
 
